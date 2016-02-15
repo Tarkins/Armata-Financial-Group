@@ -1,0 +1,273 @@
+@import bourbon
+@import fonts.sass
+@import vars.sass
+
+body
+	font-size: 15px
+	min-width: 320px
+	position: relative
+	line-height: 1.466666666666667
+	font-family: "RalewayRegular", $helvetica
+	overflow-x: hidden
+	color: #333
+
+.hidden
+	display: none
+
+.before
+	content: ""
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	right: 0
+
+.ulmenu
+	list-style-type: none
+	margin: 0
+	padding: 0
+	font-size: 0
+	li
+		display: inline-block
+
+a, a:hover, a:focus, a:active
+	color: $main-color
+
+.headers
+	font-family: "PFCentroSlabProMedium", $helvetica
+	text-transform: uppercase
+	font-weight: normal
+	color: $headers-color
+
+h1, h2, h3, h4
+	@extend .headers
+
+h1
+	font-size: rem(48px)
+
+h2
+	font-size: rem(30px)
+
+h3
+	font-size: rem(24px)
+
+b, strong
+	font-family: RalewayBold, $helvetica
+
+.main-header
+	min-height: 620px
+	background-image: url(img/header_bg.jpg)
+	background-size: cover
+	background-position: center
+	position: relative
+	padding-bottom: 120px
+	&::before
+		@extend .before
+		background-color: #394b5f
+		opacity: .85
+	h1
+		text-transform: none
+
+.gradient-line
+	padding-top: 45px
+	min-height: 160px
+	background-image: url("img/top_gradient.png")
+	background-repeat: repeat-x
+
+.main-logo
+	img
+		width: 100px
+
+.main-menu
+	color: #fff
+	ul
+		@extend .ulmenu
+	li
+		line-height: rem(48px)
+		font-size: rem(14px)
+		padding-right: 22px
+		&.active
+			a
+				color: $main-color
+				text-decoration: underline
+		&:last-child
+			padding-right: 0
+	a
+		color: #fff
+		&:hover
+			color: $main-color
+
+.phonebutton
+	text-align: right
+	position: relative
+
+.phone
+	opacity: .95;
+	color: white;
+	font-family: "RobotoBold", $helvetica;
+	font-size: rem(19px);
+	line-height: rem(48px)
+	&:hover
+		text-decoration: none
+
+.menu-button
+	position: absolute
+	top: 0
+	right: 0
+	width: rem(48px)
+	height: rem(48px)
+	text-align: center
+	line-height: rem(48px)
+
+.toggle-menu
+	display: block
+	width: rem(28px)
+	height: rem(28px)
+	margin-top: rem(14px)
+
+.toggle-menu span:after,
+.toggle-menu span:before
+	content: ""
+	position: absolute
+	left: 0
+	top: 9px
+
+.toggle-menu span:after
+	top: 18px
+
+.toggle-menu span
+	position: relative
+	display: block
+
+.toggle-menu span,
+.toggle-menu span:after,
+.toggle-menu span:before
+	width: 100%
+	height: 3px
+	background-color: #fff
+	transition: all 0.3s
+	backface-visibility: hidden
+	border-radius: 2px
+
+
+.toggle-menu.on span
+	background-color: transparent
+
+.toggle-menu.on span:before
+	transform: rotate(45deg) translate(-1px, 0px)
+
+.toggle-menu.on span:after
+	transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-menu.on + #menu
+	opacity: 1
+	visibility: visible
+.header-wrap
+	margin-top: 106px
+.header__title
+	margin-top: 120px
+	color: #fff;
+	border-bottom: 8px solid $main-color
+	display: inline-block;
+
+.header__actions
+	@extend .ulmenu
+	margin-top: 10px
+	li
+		font-size: rem(18px)
+		line-height: rem(32px)
+		display: block
+		padding-left: 16px
+		position: relative
+		font-weight: 600
+		a
+			color: #fff
+		&:before
+			content: ''
+			width: 6px
+			height: 11px
+			+triangle(12px, $main-color, right)
+			position: absolute
+			top: 10px
+			left: 0
+.header-left
+	margin-bottom: 50px
+
+.form
+	background-color: transparentize(#243343, .2)
+	padding: 25px 35px 30px
+	color: #97a4b2
+	font-size: rem(13px)
+
+.form__title
+	font-size: rem(28px)
+	color: #fff
+	text-transform: none
+	margin: 0
+
+.form__description
+	line-height: rem(18px)
+
+.form
+	label
+		margin-top: 20px
+		margin-bottom: 20px
+		display: block
+		span
+			letter-spacing: 1.5px
+			display: block
+			margin-bottom: 6px
+			color: #778390
+	input
+		outline: 0
+		display: block
+		width: 100%
+		border: none
+		background-color: #34465a
+		text-indent: 10px
+		padding: 10px 0
+		color: #97a4b2
+		box-shadow: 0 -4px #1f2a36
+		transition: .5s
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: rem(18px)
+		&:focus
+			box-shadow: 0 -4px $main-color
+			background-color: #394e65
+	.button
+			margin-top: 10px
+
+.button-wrap
+	text-align: center
+
+.button
+	display: inline-block
+	border: none
+	background-color: $main-color
+	color: #111
+	font-family: "PFCentroSlabProBold", $helvetica
+	font-size: rem(20px)
+	padding: 12px 30px
+	border-bottom: 3px solid #b97200
+	transition: all .5s
+	&:hover
+		background-color: #ffb338
+	&:active
+		background-color: #db8c0e
+
+.header__arrow
+	@extend .button-wrap
+	z-index: 2
+	position: relative
+	top: 50px
+
+.arrow-bottom
+	display: inline-block
+	width: 40px
+	height: 40px
+	background-image: url(img/arrow_down.png)
+	cursor: pointer
+	opacity: .7
+	transition: .35s
+	&:hover
+		opacity: 1

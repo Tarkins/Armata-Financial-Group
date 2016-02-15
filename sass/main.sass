@@ -1,0 +1,723 @@
+@import bourbon
+@import vars.sass
+@import owl.carousel
+@import magnific-popup
+
+*::-webkit-input-placeholder
+	color: #fff
+	opacity: 1
+
+*:-moz-placeholder
+	color: #fff
+	opacity: 1
+
+*::-moz-placeholder
+	color: #fff
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #fff
+	opacity: 1
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button
+	-webkit-appearance: none!important
+	margin: 0!important
+
+
+input[type=number]
+	-moz-appearance:textfield!important
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	margin: 0
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #fff
+body input:required:valid,
+body textarea:required:valid
+	color: #fff
+
+//Custom Styles Here
+
+.section
+	padding-top: 60px
+	background-color: #f9f9f9
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		height: 6px
+		top: -6px
+		width: 100%
+		background: url(img/section__before.png)
+
+.section__head
+	max-width: 945px
+	margin: 0 auto
+	text-align: center
+	margin-bottom: 60px
+
+.section__title
+	text-transform: uppercase
+	position: relative
+	&::after
+		content: ''
+		display: inline-block
+		height: 4px
+		background-color: $main-color
+		position: absolute
+		bottom: -30px
+		width: 165px
+		left: 50%
+		transform: translateX(-50%)
+.section__description
+	margin-top: 60px
+	padding: 0 15px
+	a
+		font-weight: bold
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+.section__footer
+	background-color: #2c3949
+	padding: 50px 0
+	text-align: center
+	a
+		&:hover
+			text-decoration: none
+			color: #111
+		&:active
+			color: #111
+		&:focus
+			color: #111
+			text-decoration: none
+
+
+.section__content
+	background-repeat: no-repeat
+	background-position: top
+	position: relative
+	padding-bottom: 90px
+	z-index: 1
+	&_property
+		background-image: url("img/s1_gray_bg.png")
+
+.bottom-triangle
+	height: 95px
+	position: absolute
+	bottom: 0
+	background-image: url("img/s1_triangle.svg")
+	width: 100%
+	background-position: top
+	background-size: 100% 100%
+	text-align: center
+
+.logo-triangle
+	width: 116px
+	margin-top: 30px
+.scales-triangle
+	width: 160px
+	position: absolute
+	top: -130px
+	left: 50%
+	transform: translate(-50%)
+	z-index: -1
+
+.property__bottom
+	padding: 0 0 65px
+	background-color: #394B5F
+
+.activity
+	padding-left: 34px
+	max-width: 300px
+	margin: 55px 0
+
+.activity__title
+	a
+		font-size: rem(22px)
+		text-transform: none
+		text-decoration: underline
+		line-height: rem(24px)
+		&:hover
+			text-decoration: none
+
+.activity__description
+	color: #111
+	font-size: rem(15px)
+	line-height: rem(18px)
+	border-bottom: 1px solid #dee1e5
+	padding-bottom: 20px
+
+.activity-wrap:nth-child(2)
+	.activity
+		margin: 0
+		.activity__title
+			margin-top: 0
+
+.activity-wrap:nth-child(4),
+.activity-wrap:nth-child(5)
+	.activity
+		margin-bottom: 0
+
+.property__bottom
+	.activity
+		margin: 15px 0 0
+	.activity__description
+		color: #f3f3f3
+		border-color: #546476
+	.activity-wrap:nth-child(2)
+		.activity
+			margin-top: 50px
+
+.deals
+	.section__description
+		margin-bottom: 60px
+
+.section__assistance
+	a
+		text-decoration: underline
+
+.services
+	text-align: center
+	a
+		text-decoration: underline
+		color: #111
+
+.service__desc
+	color: #111
+	font-family: "RalewayBold"
+	font-size: rem(13px)
+	line-height: rem(16px)
+
+.service
+	max-width: 165px
+	display: inline-block
+	text-align: center
+	vertical-align: top
+	margin-bottom: 50px
+
+.service__wrapper
+	width: 100px
+	height: 114px
+	display: inline-block
+	position: relative
+	padding-bottom: 35px
+	&:after
+		content: ''
+		width: 59px
+		height: 1px
+		background-color: $main-color
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translate(-50%)
+
+.service__img
+	max-width: 99px
+	max-height: 80px
+
+.deals
+	.section__footer
+		background-color: #E5E5E5
+
+.section_accountant
+	background-color: #2c3949
+
+	&::before
+		content: ''
+		position: absolute
+		height: 6px
+		top: -6px
+		width: 100%
+		background: url(img/section__before2.png)
+
+	.section__title
+		color: #f9f9f9
+
+	.section__description
+		color: #e5e5e5
+
+.service__title
+	color: $main-color
+	font-size: rem(22px)
+	font-weight: 500
+	line-height: 24px
+	text-decoration: underline
+	text-transform: none
+
+.service__description
+	color: #f9f9f9
+	font-size: rem(14px)
+	line-height: 18px
+
+.section__footer_accountant
+	background-color: #394b5f
+
+.section_accountant .section__head
+	margin-bottom: 20px
+
+.section__content_accountant
+	background: url('img/s3_sun_bg.png') no-repeat top center
+
+.service_accountant
+	max-width: 300px
+	text-align: left
+	margin: 50px 0
+	display: block
+
+	&_top_left
+		margin-left: 140px
+		padding-top: 50px
+
+	&_top_center
+		margin-left: 50px
+		margin-top: 50px
+
+	&_top_right
+		padding-top: 50px
+
+	&_center_left
+		margin-left: 40px
+		margin-top: 0
+		max-width: 214px
+
+	&_circle
+		margin: 45px 0 0 114px
+		padding: 0
+		background-color: $main-color
+		width: 131px
+		height: 131px
+		text-align: center
+		border-radius: 50%
+
+	&_center_right
+		max-width: 220px
+		margin-top: 0
+		margin-left: 100px
+
+	&_bottom_left
+		margin-left: 140px
+
+	&_bottom_center
+		margin-left: 35px
+		margin-top: 160px
+
+.service_accountant_circle
+	img
+		width: 70px
+		margin-top: 29px
+
+.cooperation
+
+	&__title
+		margin: 40px auto
+		text-align: center
+
+	&__cards
+		text-align: center
+		font-size: 0
+		display: flex
+		justify-content: center
+		perspective: 300px
+
+.card
+	display: inline-block
+	width: 260px
+
+
+.cooperation__card
+	background-color: #2C3949
+	padding: 55px 0 50px 0
+	transition: 1s
+	&:not(:last-child)
+		margin-right: 30px
+
+.card_off
+	opacity: .5
+	transform: rotateY(180deg)
+
+.card_on
+	opacity: 1
+
+.card__circle_cooperation
+	display: inline-block
+	margin: 0 0 35px 0
+	width: 120px
+	height: 120px
+	border-radius: 50%
+	background-color: $main-color
+	line-height: 120px
+
+.card__circle_cooperation img
+	width: 80px
+	max-width: 100%
+
+.card__heading
+	font-weight: 700
+	line-height: 36px
+
+.card__heading_cooperation
+	text-transform: uppercase
+	color: #e5e5e5
+	font-size: rem(16px)
+
+.card__explanation_cooperation
+	font-size: rem(14px)
+	line-height: 18px
+	color: #97a4b2
+	padding: 0 30px
+	margin: 0
+
+.card__discount
+	color: $main-color
+
+.section_advantages .container
+	padding-bottom: 90px
+
+.section__footer_cooperation
+	background-color: #E5E5E5
+
+.section_how-work
+	background-color: #2C3949
+	color: #f9f9f9
+	&:before
+		background-image: url(img/section__before2.png)
+
+.section__title_how-work
+	color: #f9f9f9
+
+.how-work__arrows
+	text-align: center
+	margin-bottom: 50px
+
+.arrows__arrow
+	position: relative
+	width: 284px
+	height: 128px
+	display: inline-block
+	z-index: 0
+	margin-bottom: 20px
+	cursor: default
+	transition: .1s
+	&:first-child
+		margin-left: 0
+	&:not(:first-child)
+		margin-left: -35px
+
+	&:hover
+		transform: scale(1.08)
+		svg
+			path
+				fill-opacity: 0!important
+				stroke-opacity: 1!important
+
+.arrows__arrow svg
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+
+.arrow__content
+	font-family: 'PFCentroSlabProMedium', $helvetica
+	padding-top: 40px
+	padding-left: 55px
+	&_first
+		padding-left: 35px
+
+
+.arrow__icon
+	height: 40px
+	display: block
+	float: left
+	padding-right: 10px
+.arrow__number
+	float: left
+	padding-right: 5px
+	font-size: rem(22px)
+	font-weight: 700
+	line-height: 24px
+	color: white
+
+.arrow__text
+	width: 125px
+	float: left
+	font-weight: 400
+	color: #f9f9f9
+	font-size: rem(18px)
+
+.section__footer_how-work
+	background-color: #394B5F
+
+.contact__card
+	text-align: center
+	background-color: #E5E5E5
+	padding: 54px 28px 48px
+	vertical-align: top
+	margin-bottom: 20px
+	transition: .5s
+	&:not(:last-child)
+		margin-right: 20px
+
+.contact__cards
+	text-align: center
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+
+.card__circle_contact
+	display: inline-block
+	width: 120px
+	height: 120px
+	overflow: hidden
+	border-radius: 50%
+	box-shadow: 0 0 0 5px #D6D6D6
+	& img
+		width: 120px
+		height: 120px
+
+.card__name
+	color: #333
+	font-weight: 700
+	margin: 45px 0 15px
+	font-size: rem(16px)
+
+.card__position
+	color: #6e7b8b;
+	font-size: rem(14px)
+	margin-bottom: 25px
+
+.card__phone
+	font-family: "RobotoBold"
+	font-size: rem(16px)
+	font-weight: 700
+	& a
+		color: #333
+
+.section_contact
+	padding-bottom: 60px
+
+.section_feedback
+	background-color: #E5E5E5
+	padding-bottom: 70px
+	&::before
+		background-image: url(img/section__before3.png)
+
+.slide__wrapper
+	width: 70%
+	margin: 0 auto
+	position: relative
+
+.slider_feedback .owl-nav
+	position: absolute
+	top: 12%
+	width: 100%
+	> div
+		height: 29px
+		width: 16px
+		background-image: url("img/slider_arrows.png")
+		position: absolute
+		left: 20px
+		transition: .3s
+		opacity: .7
+		&:hover
+			opacity: 1
+	.owl-next
+		left: auto
+		right: 20px
+		background-position: -16px 0
+
+.slider_feedback .owl-controls
+	text-align: center
+	.owl-dots
+		display: inline-block
+		padding-top: 50px
+		.owl-dot
+			display: inline-block
+			width: 15px
+			height: 15px
+			margin: 0 2px
+			border-radius: 50%
+			background-color: #ccc
+			&.active
+				background-color: $main-color
+
+.owl-item
+	.slide__circle
+		transform: translate3d(100px, 0, 0)
+	.slide__text
+		transform: translate3d(50px, 0, 0)
+		opacity: .5
+
+.owl-item.active
+	.slide__circle
+		transition: 1s
+		transform: translate3d(0px, 0, 0)
+	.slide__text
+		transform: translate3d(0px, 0, 0)
+		transition: 1.3s
+		transition-delay: .1s
+		opacity: 1
+
+.slide
+	text-align: center
+	padding-top: 10px
+
+	&__circle
+		width: 120px
+		height: 120px
+		border-radius: 50%
+		overflow: hidden
+		display: inline-block
+		box-shadow: 0 0 0 6px $main-color
+		margin-bottom: 30px
+
+	&__img
+		width: 120px
+		height: 120px
+		border-radius: 50%
+
+	&__name
+		font-size: rem(18px)
+		font-weight: 700
+		line-height: 36px
+		margin-bottom: 5px
+
+	&__firm
+		color: #6e7b8b
+		font-size: rem(14px)
+		margin-bottom: 25px
+
+.section_professionals
+	padding-top: 85px
+	padding-bottom: 75px
+
+.section__head_professionals
+	text-align: left
+
+.section__title_professionals
+	margin-top: 0
+	line-height: rem(30px)
+	&::after
+		transform: none
+		left: 0
+
+.section__description_professionals
+	padding-left: 0
+
+.professionals__prizes
+	margin-top: 45px
+
+.prizes__prize
+	display: inline-block
+	vertical-align: top
+	width: 165px
+	text-align: center
+	margin-bottom: 20px
+
+.prize__desc
+	font-size: rem(13px)
+	line-height: rem(16px)
+	font-family: "RalewayBold"
+
+.prize__img
+	height: 72px
+	margin-bottom: 30px
+
+.section__head_professionals
+	margin-bottom: 0
+
+.form_footer
+	background-color: transparentize(#d6d6d6, .2)
+
+	.form__title
+		color: #2c3949
+
+	.form__description
+		color: #5e6267
+
+	span
+		color: #778390
+
+	input
+		background-color: silver
+
+.page-footer
+	background-color: #2C3949
+	padding-top: 75px
+	padding-bottom: 55px
+	&:before
+		background-image: url("img/section__before2.png")
+
+.footer__content
+	.main-logo,
+	.phone
+		transition: .3s
+		opacity: .35
+
+.footer__content
+	.main-logo:hover,
+	.phone:hover
+		opacity: .9
+
+.to-top
+	height: 36px
+	background-color: #1f2b3a
+	background-image: url("img/top.png")
+	background-repeat: no-repeat
+	background-position: center
+	cursor: pointer
+
+#modal
+	max-width: 400px
+	margin: auto
+	position: relative
+	background-color: #2C3949
+	.form__title
+		line-height: 1.1
+		padding-top: 20px
+
+.mfp-form
+	&.mfp-bg
+		opacity: 0
+		transition: all 0.15s ease-out
+		&.mfp-ready
+			opacity: 0.8
+		&.mfp-removing
+			opacity: 0
+	&.mfp-wrap
+		.mfp-content
+			opacity: 0
+			transition: all 0.15s ease-out
+		&.mfp-ready .mfp-content
+			opacity: 1
+		&.mfp-removing .mfp-content
+			opacity: 0
+
+.mfp-content
+	.mfp-close
+		color: #ebebeb
+
+.ok,
+.error
+	max-width: 400px
+	text-align: center
+	font-family: RalewayBold, $helvetica
+	font-size: 1.6rem
+	padding: 100px 50px
+	position: relative
+	margin: auto
+	background-color: #2C3949
+	color: #ebebeb
+
+//ALWAYS END
+@import media
+
+//Load Libs SASS
+@import app/libs/animate/animate.sass

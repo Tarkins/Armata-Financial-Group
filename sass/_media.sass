@@ -1,0 +1,246 @@
+@import bourbon
+@import vars.sass
+
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+
+	.main-menu
+		display: none
+		background-color: #1c242c
+		min-width: 200px
+		position: absolute
+		right: 20px
+		z-index: 2
+		ul
+			li
+				display: block
+				padding: 0
+				line-height: 0
+			a
+				display: block
+				line-height: rem(48px)
+				padding: 0 15px
+				transition: all .5s ease
+				&:hover
+					background-color: #273646
+
+	.footer__content
+		.main-menu
+			position: relative
+			max-width: 200px
+			float: right
+			margin-right: -15px
+
+	.phone
+		margin-right: 40px
+
+	.service_accountant_circle
+		margin-top: 10px
+		margin-left: 80px
+
+	.prizes__prize
+		width: 23%
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.main-menu
+		top: 50px
+
+	.footer__content
+		.main-menu
+			top: 5px
+
+	.header__title
+		margin: 0
+
+	.bottom-triangle
+		background-size: cover
+
+	.activity
+		margin: 30px 0
+
+	.service_accountant_circle
+		display: none
+
+	.service_accountant
+		margin: 0
+		padding: 0
+
+	.section__content_accountant
+		background-image: none
+
+	.arrows__arrow:not(:first-child)
+		margin-left: 0
+
+	.section__head_professionals
+		text-align: center
+
+	.section__title_professionals::after
+		transform: translate(-50%)
+		left: 50%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+	.header-wrap
+		margin-top: 0
+
+	.activity
+		max-width: 100%
+		margin: 20px 0
+		border-bottom: 1px solid #dee1e5
+		margin-top: 20px
+
+	.activity-wrap:first-child
+		.activity
+			margin-top: 0
+
+	.activity-wrap:last-child
+		.activity
+			border-color: transparent
+
+	.activity__description
+		border: none
+
+	.property__bottom
+		padding: 0
+		.activity
+			border-color: #546476
+			margin: 25px 0
+		.activity-wrap:nth-child(2)
+			.activity
+				margin: 25px 0
+
+	.section__content_property
+		background-position: bottom
+
+	.service_accountant
+		margin: 0 auto
+		max-width: 80%
+
+	.cooperation__cards
+		flex-wrap: wrap
+
+	.cooperation__card:not(:last-child)
+		margin-right: 10px
+		margin-bottom: 20px
+
+
+	.prizes__prize
+		width: 45%
+
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+@media only screen and (max-width : 585px)
+
+	.card:last-child
+		margin-right: 20px
+
+	.cooperation__card.card
+		margin-right: 10px
+
+	.slider_feedback .owl-nav
+		top: 11%
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.phone
+		font-size: 1rem
+		margin-right: 40px
+
+	.main-logo
+		img
+			max-width: 100%
+
+	.cooperation__cards
+		flex-direction: column
+		align-items: center
+
+	.card
+		margin-right: 0
+
+	.slider_feedback .owl-nav
+		top: 10%
+
+	.owl-item
+		.slide__circle
+			transform: translate3d(0, 0, 0)
+		.slide__text
+			transform: translate3d(0, 0, 0)
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.phone, .menu-button
+		line-height: rem(28px)
+
+	.phone
+		margin-right: 40px
+
+	.menu-button
+		width: rem(28px)
+		height: rem(28px)
+
+	.toggle-menu
+		margin-top: 5px
+
+	.service
+		max-width: 140px
+
+
+	.prizes__prize
+		width: 90%
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.main-menu
+		display: block !important
+	a
+		outline: none !important
+
